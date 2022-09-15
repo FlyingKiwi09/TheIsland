@@ -9,7 +9,9 @@ public class Island {
 	public Island() {
 	}
 	
-	
+	public void simulateRound() {
+		
+	}
 	
 
 	public int getWidth() {
