@@ -4,10 +4,9 @@ abstract public class LivingThing extends IslandItem {
 	private boolean alive;
 	private int size;
 
-	public LivingThing(int xPosition, int yPosition, int size, boolean alive) {
+	public LivingThing(int xPosition, int yPosition) {
 		super(xPosition, yPosition);
-		this.size = size;
-		this.alive = alive;
+		this.alive = true;
 		
 	}
 	

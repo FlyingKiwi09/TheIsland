@@ -24,8 +24,8 @@ abstract public class Animal extends LivingThing {
 	private ArrayList<String> foodSources;
 
 
-	public Animal(int xPosition, int yPosition, int size, boolean alive) {
-		super(xPosition, yPosition, size, alive);
+	public Animal(int xPosition, int yPosition) {
+		super(xPosition, yPosition);
 		
 	}
 	
