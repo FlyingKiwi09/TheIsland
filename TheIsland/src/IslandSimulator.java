@@ -12,18 +12,22 @@ public class IslandSimulator {
 	
 	public void generateIsland() {
 		islands.add(new Island());
-		
 		for (Island i: islands) {
 			generateRabbits(i);
 		}
 	}
 	
-	public void generateRabbits(Island i) {
-		int randomX = randomNum(0, islands.get(0).getWidth());
-		int randomY = randomNum(0, islands.get(0).getLength());
-		Rabbit newRabbit = new Rabbit(randomX, randomY);
+	// generates rabbits at random positions on the island
+	public void generateRabbits(Island island) {
 		
-		i.getLivingThings().add(newRabbit);
+		int numberOfRabbits = randomNum(5,10); // so that 5 to 10 rabbits will be generated on the island
+		
+		for (int i = 0; i < numberOfRabbits; i++) {
+			int randomX = randomNum(0, islands.get(0).getWidth());
+			int randomY = randomNum(0, islands.get(0).getLength());
+			Rabbit newRabbit = new Rabbit(randomX, randomY);
+			island.getLivingThings().add(newRabbit);
+		}
 	}
 	
 	public void testIsland() {
