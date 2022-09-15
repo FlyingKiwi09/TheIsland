@@ -28,5 +28,7 @@ abstract public class Animal extends LivingThing {
 		super(xPosition, yPosition, size, alive);
 		
 	}
+	
+	
 
 }
