@@ -1,5 +1,5 @@
 
-public class IslandItem {
+abstract public class IslandItem {
 	private int xPosition, yPosition;
 
 	public IslandItem(int xPosition, int yPosition) {
