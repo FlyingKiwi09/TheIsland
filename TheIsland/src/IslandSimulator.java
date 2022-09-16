@@ -53,6 +53,19 @@ public class IslandSimulator {
 		}
 	}
 	
+	/**
+	 * reportOnIslands method prints the number of animals surviving on each island in the simulation
+	 * <p> 
+	 * 
+	 * @since 1.0
+	 */
+	public void reportOnIslands() {
+		for (int i = 0; i < islands.size(); i++) {
+			int survivingAnimals = islands.get(i).getLivingThings().size();
+			System.out.println("Island " + (i+1) + " has " + survivingAnimals + " surviving animals.");
+		}
+	}
+	
 	// generates rabbits at random positions on the island
 	private void generateRabbits(Island island) {
 		
