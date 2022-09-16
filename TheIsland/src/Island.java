@@ -19,7 +19,13 @@ public class Island {
 	public Island() {
 	}
 	
-	// moves all the animals during a turn
+	/**
+	 * simulateTurn method updates the island for one turn during which all animals move according to their current direction and speed and their direction is updated to a new random direction.
+	 * 
+	 * @since 2.0
+	 * @param worm the first segment of an existing worm. Should not be null.
+	 */
+	
 	public void simulateTurn() {
 		for (LivingThing lt: livingThings) {
 			if (lt instanceof Animal) {

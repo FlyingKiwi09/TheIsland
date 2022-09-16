@@ -60,6 +60,13 @@ abstract public class Animal extends LivingThing {
 		}
 	}
 	
+	/**
+	 * move method moves an animal according to it's current direction and speed then sets a new random direciton for the animal.
+	 * 
+	 * @since 2.0
+	 * @param worm the first segment of an existing worm. Should not be null.
+	 */
+	
 	public void move() {
 		if (this.direction.equals(Direction.West)) {
 			this.setxPosition(this.getxPosition()-this.currentSpeed);
