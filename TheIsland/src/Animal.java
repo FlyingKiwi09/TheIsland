@@ -44,8 +44,8 @@ abstract public class Animal extends LivingThing {
 		this.currentSpeed = currentSpeed;
 	}
 	
-	public Direction randomDirection() {
-		int d = (int) (Math.random() * (3)) + 1;
+	private Direction randomDirection() {
+		int d = (int) (Math.random() * (4)) + 1;
 		switch (d) {
 			case 1:
 				return Direction.North;
@@ -53,13 +53,24 @@ abstract public class Animal extends LivingThing {
 				return Direction.South;
 			case 3:
 				return Direction.East;
-			default: 
+			case 4: 
 				return Direction.West;
+			default:
+				return null;
 		}
 	}
 	
 	public void move() {
-		
+		if (this.direction.equals(Direction.West)) {
+			this.setxPosition(this.getxPosition()-this.currentSpeed);
+		} else if (this.direction.equals(Direction.East)) {
+			this.setxPosition(this.getxPosition()+this.currentSpeed);
+		} else if (this.direction.equals(Direction.South)) {
+			this.setyPosition(this.getyPosition()+this.currentSpeed);
+		} else if (this.direction.equals(Direction.North)) {
+			this.setyPosition(this.getyPosition()-this.currentSpeed);
+		}
+		this.direction = randomDirection();
 	}
 
 	public int getCurrentSpeed() {

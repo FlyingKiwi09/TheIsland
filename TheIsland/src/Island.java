@@ -19,8 +19,13 @@ public class Island {
 	public Island() {
 	}
 	
-	public void simulateRound() {
-		
+	// moves all the animals during a turn
+	public void simulateTurn() {
+		for (LivingThing lt: livingThings) {
+			if (lt instanceof Animal) {
+				((Animal) lt).move();
+			}
+		}
 	}
 	
 

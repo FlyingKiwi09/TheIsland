@@ -31,8 +31,9 @@ public class IslandSimulator {
 	// generates an island and it's IslandItems
 	public void generateIsland() {
 		Island newIsland = new Island();
-		generateRabbits(newIsland);
 		islands.add(newIsland);
+		generateRabbits(newIsland);
+
 	}
 	
 	// generates rabbits at random positions on the island
@@ -50,6 +51,16 @@ public class IslandSimulator {
 	
 	public void testIsland() {
 		System.out.println(islands.get(0).getLength() + " " + islands.get(0).getWidth());
+		for (Island i: islands) {
+			ArrayList<LivingThing> rabbits = i.getLivingThings();
+			for (LivingThing lt: rabbits) {
+				if (lt instanceof Rabbit) {
+					Rabbit r = ((Rabbit) lt);
+					System.out.println(r.getDirection());
+				}
+				
+			}
+		}
 	}
 	
 	private int randomNum(int min, int max) {
