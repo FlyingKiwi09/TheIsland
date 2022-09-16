@@ -1,5 +1,16 @@
 import java.util.ArrayList;
 
+/**
+ * Animal class is the abstract super class for all animals on an island.
+ * <p> 
+ * Animal class allows subclasses to store data related to animals including their state (thirsty, hungry, pregnant, agressionLevel, currentSpeed, direction), characteristics (gender, age, gestation period, vision, smell, maximum speed), predators and food sources. 
+ * It also provides for core animal behaviour such as eating. 
+ * 
+ * @author Alina Hookway
+ * @version 1.0
+ * @since 1.0
+ */
+
 abstract public class Animal extends LivingThing {
 	
 	// state

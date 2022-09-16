@@ -1,3 +1,13 @@
+/**
+ * IslandItem class is the abstract super class for all items on an island.
+ * <p> 
+ * IslandItem maintains the x and y coordinates of each item on the island.
+ * 
+ * @author Alina Hookway
+ * @version 1.0
+ * @since 1.0
+ */
+
 
 abstract public class IslandItem {
 	private int xPosition, yPosition;

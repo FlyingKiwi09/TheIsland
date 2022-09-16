@@ -1,5 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * Island class represents a two-dimesional world of fixed width and height and the items contained within it. 
+ * <p> 
+ * The life of the items (living things, geographical features and others) can be simulated on a turn basis.
+ * 
+ * @author Alina Hookway
+ * @version 1.0
+ * @since 1.0
+ */
+
 public class Island {
 	private final int width = 100;
 	private final int length = 100;
