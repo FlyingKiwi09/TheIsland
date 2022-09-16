@@ -26,6 +26,8 @@ public class IslandSimulator {
 	 * generateIsland() creates a new Island 
 	 * <p> 
 	 * Creates a new Island including it's associated IslandItems such as rabbits and stores these to the IslandSimulator.
+	 * 
+	 * @since 1.0
 	 */
 	
 	// generates an island and it's IslandItems
@@ -34,6 +36,21 @@ public class IslandSimulator {
 		islands.add(newIsland);
 		generateRabbits(newIsland);
 
+	}
+	
+	/**
+	 * runSimulation method runs a simulation of the islands in the IslandSimulator.
+	 * <p> 
+	 * 
+	 * @param numberOfTurns is the number of iterations each Island will run through. Should be a non-zero positive integer. Should not be null.
+	 * @since 1.0
+	 */
+	public void runSimulation(int numberOfTurns) {
+		for (int i = 0; i < numberOfTurns; i++) {
+			for (Island island : islands) {
+				island.simulateTurn();
+			}
+		}
 	}
 	
 	// generates rabbits at random positions on the island
@@ -48,6 +65,8 @@ public class IslandSimulator {
 			island.getLivingThings().add(newRabbit);
 		}
 	}
+	
+	
 	
 	public void testIsland() {
 		System.out.println(islands.get(0).getLength() + " " + islands.get(0).getWidth());
