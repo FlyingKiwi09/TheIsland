@@ -9,12 +9,13 @@
  */
 public class Egg extends IslandItem {
 
-	public Animal animal;
+	private Class<? extends Animal> animal;
 	
-	public Egg(int xPosition, int yPosition, Animal animal) {
+	public Egg(int xPosition, int yPosition, Class<? extends Animal> class1) {
+		// TODO Auto-generated constructor stub
 		super(xPosition, yPosition);
 		// TODO Auto-generated constructor stub
-		this.animal = animal;
+		this.animal = class1;
 	}
 
 }

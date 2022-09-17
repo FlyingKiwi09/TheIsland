@@ -19,4 +19,14 @@ public class Nest extends IslandItem {
 		this.eggs = new ArrayList<Egg>();
 	}
 
+	public ArrayList<Egg> getEggs() {
+		return eggs;
+	}
+
+	public void setEggs(ArrayList<Egg> eggs) {
+		this.eggs = eggs;
+	}
+	
+
+
 }

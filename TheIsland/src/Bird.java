@@ -10,7 +10,7 @@
 abstract public class Bird extends Animal implements LaysInNest{
 
 	private int maxHeight;
-	private Nest nest;
+	protected Nest nest;
 	
 	public Bird(int xPosition, int yPosition, int size, int maxSpeed, int currentSpeed, int maxHeight) {
 		super(xPosition, yPosition, size, maxSpeed, currentSpeed);

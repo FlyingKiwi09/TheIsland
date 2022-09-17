@@ -10,7 +10,7 @@
 
 
 abstract public class IslandItem {
-	private int xPosition, yPosition;
+	protected int xPosition, yPosition;
 
 	public IslandItem(int xPosition, int yPosition) {
 		this.xPosition = xPosition;

@@ -16,7 +16,7 @@ public class Kiwi extends Bird {
 	@Override
 	public void buildNest() {
 		// TODO Auto-generated method stub
-		
+		this.nest = new Nest(this.xPosition, this.yPosition);
 	}
 
 	@Override
@@ -28,6 +28,9 @@ public class Kiwi extends Bird {
 	@Override
 	public void layEgg() {
 		// TODO Auto-generated method stub
+		
+		Egg newEgg = new Egg(this.xPosition, this.yPosition, this.getClass());
+		this.nest.getEggs().add(newEgg);
 		
 	}
 
