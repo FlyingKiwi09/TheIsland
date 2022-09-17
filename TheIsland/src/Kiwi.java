@@ -25,13 +25,17 @@ public class Kiwi extends Bird {
 		
 	}
 
+	/**
+	 * layEgg method creates a new Egg and stores it to the nest
+	 * <p> 
+	 * 
+	 * @since 1.0
+	 */
+	
 	@Override
 	public void layEgg() {
-		// TODO Auto-generated method stub
-		
 		Egg newEgg = new Egg(this.xPosition, this.yPosition, this.getClass());
 		this.nest.getEggs().add(newEgg);
-		
 	}
 
 }

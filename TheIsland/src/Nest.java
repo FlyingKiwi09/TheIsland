@@ -13,9 +13,17 @@ public class Nest extends IslandItem {
 
 	private ArrayList<Egg> eggs;
 	
+	/**
+	 * Nest constructor method creates a new Nest.
+	 * <p> 
+	 * @param xPosition stores the x coordinate of the Nest on the island. 
+	 * @param yPosition stores the y coordinate of the Nest on the island.
+	 * @author Alina Hookway
+	 * @version 1.0
+	 * @since 1.0
+	 */
 	public Nest(int xPosition, int yPosition) {
 		super(xPosition, yPosition);
-		// TODO Auto-generated constructor stub
 		this.eggs = new ArrayList<Egg>();
 	}
 
