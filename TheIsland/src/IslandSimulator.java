@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * IslandSimulator class controls the creation and simulation of Islands.
  * <p> 
- * IslandSimulator controls the creation of Islands and other objects contained within it such as rabbits. It allows for the simulation of turns on these islands.
+ * IslandSimulator controls the creation of Islands and other objects contained within it such as rabbits, grass and kiwi. It allows for the simulation of turns on these islands.
  * 
  * @author Alina Hookway
  * @version 1.0
