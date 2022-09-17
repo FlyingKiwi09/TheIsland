@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 
 public class Island {
-	private final int width = 100;
-	private final int length = 100;
+	private static final int width = 100;
+	private static final int length = 100;
 	
 	private ArrayList<LivingThing> livingThings = new ArrayList<LivingThing>();
 	
@@ -42,8 +42,6 @@ public class Island {
 	public int getLength() {
 		return length;
 	}
-
-
 
 
 	public ArrayList<LivingThing> getLivingThings() {

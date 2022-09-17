@@ -23,7 +23,7 @@ abstract public class Animal extends LivingThing {
 	
 	// characteristics
 	private boolean female; // to store gender
-	private int age;
+	private double age;
 	private int numberOfTurnsGestation;
 	private int vision;
 	private int smell;
@@ -44,21 +44,7 @@ abstract public class Animal extends LivingThing {
 		this.currentSpeed = currentSpeed;
 	}
 	
-	private Direction randomDirection() {
-		int d = (int) (Math.random() * (4)) + 1;
-		switch (d) {
-			case 1:
-				return Direction.North;
-			case 2:
-				return Direction.South;
-			case 3:
-				return Direction.East;
-			case 4: 
-				return Direction.West;
-			default:
-				return null;
-		}
-	}
+
 	
 	/**
 	 * move method moves an animal according to it's current direction and speed then sets a new random direciton for the animal.
@@ -103,6 +89,20 @@ abstract public class Animal extends LivingThing {
 		this.maxSpeed = maxSpeed;
 	}
 	
-	
+	private Direction randomDirection() {
+		int d = (int) (Math.random() * (4)) + 1;
+		switch (d) {
+			case 1:
+				return Direction.North;
+			case 2:
+				return Direction.South;
+			case 3:
+				return Direction.East;
+			case 4: 
+				return Direction.West;
+			default:
+				return null;
+		}
+	}
 
 }
