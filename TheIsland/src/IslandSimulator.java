@@ -25,7 +25,7 @@ public class IslandSimulator {
 	/**
 	 * generateIsland() creates a new Island 
 	 * <p> 
-	 * Creates a new Island including it's associated IslandItems such as rabbits and grass and stores these to the IslandSimulator.
+	 * Creates a new Island including it's associated IslandItems such as rabbits, grass and kiwi and stores these to the IslandSimulator.
 	 * 
 	 * @since 1.0
 	 */
@@ -36,6 +36,7 @@ public class IslandSimulator {
 		islands.add(newIsland);
 		generateRabbits(newIsland);
 		generateGrass(newIsland);
+		generateKiwi(newIsland);
 
 	}
 	
@@ -55,7 +56,7 @@ public class IslandSimulator {
 	}
 	
 	/**
-	 * reportOnIslands method prints the number of animals surviving on each island in the simulation
+	 * reportOnIslands method prints the number of living things currently surviving on each island in the simulation
 	 * <p> 
 	 * 
 	 * @since 1.0
@@ -90,6 +91,17 @@ public class IslandSimulator {
 		}
 	}
 	
+	
+	// genrates kiwi at random positions on an island
+		private void generateKiwi(Island island) {
+			for (int i = 0; i < 10; i++) {
+				int randomX = randomNum(0, islands.get(0).getWidth());
+				int randomY = randomNum(0, islands.get(0).getLength());
+				Kiwi newKiwi = new Kiwi(randomX, randomY);
+				island.getLivingThings().add(newKiwi);
+			}
+		}
+		
 	
 	
 	public void testIsland() {

@@ -8,7 +8,6 @@ abstract public class Bird extends Animal {
 		super(xPosition, yPosition, size, maxSpeed, currentSpeed);
 		this.maxHeight = maxHeight;
 //		this.nest = null;
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void fly() {

@@ -9,9 +9,8 @@
  */
 public class Kiwi extends Bird {
 
-	public Kiwi(int xPosition, int yPosition, int size, int maxSpeed, int currentSpeed, int maxHeight) {
+	public Kiwi(int xPosition, int yPosition) {
 		super(xPosition, yPosition, 5, 4, 2, 0);
-		// TODO Auto-generated constructor stub
 	}
 
 }
