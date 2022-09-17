@@ -13,4 +13,22 @@ public class Kiwi extends Bird {
 		super(xPosition, yPosition, 5, 4, 2, 0);
 	}
 
+	@Override
+	public void buildNest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void incubate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void layEgg() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
