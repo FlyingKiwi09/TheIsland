@@ -25,7 +25,7 @@ public class IslandSimulator {
 	/**
 	 * generateIsland() creates a new Island 
 	 * <p> 
-	 * Creates a new Island including it's associated IslandItems such as rabbits and stores these to the IslandSimulator.
+	 * Creates a new Island including it's associated IslandItems such as rabbits and grass and stores these to the IslandSimulator.
 	 * 
 	 * @since 1.0
 	 */
@@ -35,6 +35,7 @@ public class IslandSimulator {
 		Island newIsland = new Island();
 		islands.add(newIsland);
 		generateRabbits(newIsland);
+		generateGrass(newIsland);
 
 	}
 	
@@ -66,7 +67,7 @@ public class IslandSimulator {
 		}
 	}
 	
-	// generates rabbits at random positions on the island
+	// generates rabbits at random positions on an island
 	private void generateRabbits(Island island) {
 		
 		int numberOfRabbits = randomNum(5,10); // so that 5 to 10 rabbits will be generated on the island
@@ -76,6 +77,16 @@ public class IslandSimulator {
 			int randomY = randomNum(0, islands.get(0).getLength());
 			Rabbit newRabbit = new Rabbit(randomX, randomY);
 			island.getLivingThings().add(newRabbit);
+		}
+	}
+	
+	// genrates grass at random positions on an island
+	private void generateGrass(Island island) {
+		for (int i = 0; i < 30; i++) {
+			int randomX = randomNum(0, islands.get(0).getWidth());
+			int randomY = randomNum(0, islands.get(0).getLength());
+			Grass newGrass = new Grass(randomX, randomY);
+			island.getLivingThings().add(newGrass);
 		}
 	}
 	

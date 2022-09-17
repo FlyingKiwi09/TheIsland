@@ -20,7 +20,7 @@ public class Island {
 	}
 	
 	/**
-	 * simulateTurn method updates the island for one turn during which all animals move according to their current direction and speed and their direction is updated to a new random direction.
+	 * simulateTurn method updates the island for one turn during which all animals move according to their current direction and speed and their direction is updated to a new random direction. Grass grows.
 	 * 
 	 * @since 1.0
 	 * 
@@ -30,6 +30,8 @@ public class Island {
 		for (LivingThing lt: livingThings) {
 			if (lt instanceof Animal) {
 				((Animal) lt).move();
+			} else if (lt instanceof Grass) {
+				((Grass) lt).grow();
 			}
 		}
 	}
