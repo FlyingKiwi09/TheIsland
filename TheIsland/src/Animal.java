@@ -13,9 +13,13 @@ import java.util.ArrayList;
 
 abstract public class Animal extends LivingThing {
 	
+	// limits
+	public static final int maxHunger = 100;
+	public static final int minHunger = 0;
+	
 	// state
 	private boolean thirsty;
-	private boolean hungry;
+	private int hunger; // an integer between 0 and 100 to represent a percentage
 	private boolean pregnant;
 	private int agressionLevel;
 	private int currentSpeed;
@@ -36,23 +40,25 @@ abstract public class Animal extends LivingThing {
 	private ArrayList<String> predators;
 	private ArrayList<String> foodSources;
 
-
+	// constructor
 	public Animal(int xPosition, int yPosition, int size, int maxSpeed, int currentSpeed) {
 		super(xPosition, yPosition, size);
 		this.direction = randomDirection();
 		this.maxSpeed = maxSpeed;
 		this.currentSpeed = currentSpeed;
+		this.hunger = randomNum(minHunger, maxHunger); // sets a random hunger level between maxinum hunger and minimum hunger
 	}
 	
 
 	
 	/**
-	 * move method moves an animal according to it's current direction and speed then sets a new random direciton for the animal.
+	 * move method moves an animal according to it's current direction and speed so long as it is within the bounds of the island. Then it increase the animals hunger by 1 and sets a new random direciton for the animal.
 	 * 
 	 * @since 1.0
 	 */
 	
 	public void move() {
+		// TODO: if the animal is not going to move out of bounds...
 		if (this.direction.equals(Direction.West)) {
 			this.setxPosition(this.getxPosition()-this.currentSpeed);
 		} else if (this.direction.equals(Direction.East)) {
@@ -62,7 +68,21 @@ abstract public class Animal extends LivingThing {
 		} else if (this.direction.equals(Direction.North)) {
 			this.setyPosition(this.getyPosition()-this.currentSpeed);
 		}
+		this.hunger += 1; // increase the animals hunger when it moves
 		this.direction = randomDirection();
+	}
+	
+	/**
+	 * eat method checks that the animal is next to something it can eat and that it's hunger is over 50%. If so it decrease the animals hunger by 10.
+	 * 
+	 * @since 1.0
+	 */
+	
+	public void eat() {
+		//TODO: if the animal is next to something it can eat...
+		if (this.hunger > 50) {
+			this.hunger -= 10;
+		}
 	}
 
 	public int getCurrentSpeed() {
@@ -103,6 +123,10 @@ abstract public class Animal extends LivingThing {
 			default:
 				return null;
 		}
+	}
+	
+	private int randomNum(int min, int max) {
+		return (int) (Math.random() * (max - min)) + min;
 	}
 
 }
