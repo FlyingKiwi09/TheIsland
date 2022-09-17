@@ -2,12 +2,12 @@
 abstract public class Bird extends Animal {
 
 	private int maxHeight;
-	private Nest nest;
+//	private Nest nest;
 	
 	public Bird(int xPosition, int yPosition, int size, int maxSpeed, int currentSpeed, int maxHeight) {
 		super(xPosition, yPosition, size, maxSpeed, currentSpeed);
 		this.maxHeight = maxHeight;
-		this.nest = null;
+//		this.nest = null;
 		// TODO Auto-generated constructor stub
 	}
 	
