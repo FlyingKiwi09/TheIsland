@@ -7,7 +7,6 @@ public class Main {
 		simulator.generateIsland();
 		simulator.reportOnIslands();
 		simulator.runSimulation(10);
-		simulator.testIsland();
 		simulator.reportOnIslands();
 	}
 }

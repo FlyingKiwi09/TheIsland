@@ -12,6 +12,15 @@ abstract public class Mammal extends Animal {
 	private boolean parasiticInfection;
 	private boolean rabiesInfection;
 
+	/**
+	 * Constructs a representation of a mammal
+	 * <p> 
+	 * @param xPosition stores the x coordinate of the mammal on the island. Should not be null.
+	 * @param yPosition stores the y coordinate of the mammal on the island. Should not be null.
+	 * @author Alina Hookway
+	 * @version 1.0
+	 * @since 1.0
+	 */
 	public Mammal(int xPosition, int yPosition, int size, int maxSpeed, int currentSpeed) {
 		super(xPosition, yPosition, size, maxSpeed, currentSpeed);
 		// TODO Auto-generated constructor stub

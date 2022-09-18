@@ -9,10 +9,17 @@
  */
 abstract public class Foliage extends LivingThing {
 	
-
+	/**
+	 * Constructs a piece of foliage on the island.
+	 * <p> 
+	 * @param xPosition stores the x coordinate of the foliage on the island. Should not be null.
+	 * @param yPosition stores the y coordinate of the foliage on the island. Should not be null.
+	 * @author Alina Hookway
+	 * @version 1.0
+	 * @since 1.0
+	 */
 	public Foliage(int xPosition, int yPosition, int size) {
 		super(xPosition, yPosition, size);
-		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -101,23 +101,7 @@ public class IslandSimulator {
 				island.getLivingThings().add(newKiwi);
 			}
 		}
-		
-	
-	
-	public void testIsland() {
-		System.out.println(islands.get(0).getLength() + " " + islands.get(0).getWidth());
-		for (Island i: islands) {
-			ArrayList<LivingThing> rabbits = i.getLivingThings();
-			for (LivingThing lt: rabbits) {
-				if (lt instanceof Rabbit) {
-					Rabbit r = ((Rabbit) lt);
-					System.out.println(r.getDirection());
-				}
-				
-			}
-		}
-	}
-	
+			
 	private int randomNum(int min, int max) {
 		return (int) (Math.random() * (max - min)) + min;
 	}
